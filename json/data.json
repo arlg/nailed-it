@@ -1,0 +1,89 @@
+{
+    "topbgcolor" : "#262865",
+    "bottombgcolor" : "#a90254",
+    "assetnutral" : "assets/650/hand-nutral.png",
+    "nailsets" : [
+        {
+            "id" : "CRAZY-EYES",
+            "name" : "Crazy Eyes",
+            "sequencepath": "assets/650/CRAZY-EYES/SPRITES/",
+            "topbgcolor" : "#8a879d",
+            "bottombgcolor" : "#f8e2df",
+            "colorassets" : [
+                "assets/650/CRAZY-EYES/step1.png",
+                "assets/650/CRAZY-EYES/step2.png",
+                "assets/650/CRAZY-EYES/step3.png"
+            ]
+        },
+        {
+            "id" : "LOTUS-EYES",
+            "name" : "Lotus Eyes",
+            "sequencepath": "assets/650/LOTUS-EYES/SPRITES/",
+            "topbgcolor" : "#8c8ea4",
+            "bottombgcolor" : "#e4afa7",
+            "colorassets" : [
+                "assets/650/LOTUS-EYES/step1.png",
+                "assets/650/LOTUS-EYES/step2.png",
+                "assets/650/LOTUS-EYES/step3.png"
+            ]
+        },
+        {
+            "id" : "NAJA-PETALS",
+            "name" : "Naja Petals",
+            "sequencepath": "assets/650/NAJA-PETALS/SPRITES/",
+            "topbgcolor" : "#84828c",
+            "bottombgcolor" : "#bc8889",
+            "colorassets" : [
+                "assets/650/NAJA-PETALS/step1.png",
+                "assets/650/NAJA-PETALS/step2.png",
+                "assets/650/NAJA-PETALS/step3.png"
+            ]
+        },
+        {
+            "id" : "NAJA-RIBBON",
+            "name" : "Naja Ribbon",
+            "sequencepath": "assets/650/NAJA-RIBBON/SPRITES/",
+            "topbgcolor" : "#a3a3a3",
+            "bottombgcolor" : "#dcd6d0",
+            "colorassets" : [
+                "assets/650/NAJA-RIBBON/step1.png",
+                "assets/650/NAJA-RIBBON/step2.png",
+                "assets/650/NAJA-RIBBON/step3.png"
+            ]
+        },
+        {
+            "id" : "PETAL-SNAKE",
+            "name" : "Petal Snake",
+            "sequencepath": "assets/650/PETAL-SNAKE/SPRITES/",
+            "topbgcolor" : "#fde7e3",
+            "bottombgcolor" : "#d8dadf",
+            "colorassets" : [
+                "assets/650/PETAL-SNAKE/step1.png",
+                "assets/650/PETAL-SNAKE/step2.png"
+            ]
+        },
+        {
+            "id" : "RIBBON-ROOF",
+            "name" : "Ribbon Roof",
+            "sequencepath": "assets/650/RIBBON-ROOF/SPRITES/",
+            "topbgcolor" : "#c4c3bc",
+            "bottombgcolor" : "#facfd6",
+            "colorassets" : [
+                "assets/650/RIBBON-ROOF/step1.png",
+                "assets/650/RIBBON-ROOF/step2.png"
+            ]
+        },
+        {
+            "id" : "ZIGZAG-COBRA",
+            "name" : "Zigzag Cobra",
+            "sequencepath": "assets/650/ZIGZAG-COBRA/SPRITES/",
+            "topbgcolor" : "#c2c1c2",
+            "bottombgcolor" : "#ada893",
+            "colorassets" : [
+                "assets/650/ZIGZAG-COBRA/step1.png",
+                "assets/650/ZIGZAG-COBRA/step2.png",
+                "assets/650/ZIGZAG-COBRA/step3.png"
+            ]
+        }
+    ]
+}

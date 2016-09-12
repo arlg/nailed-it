@@ -1,0 +1,75 @@
+/*
+ * Simple fade in with opacity
+ */
+.anim-fadeIn{
+	opacity: 0;
+	@include transition ( opacity 1.2s );
+
+	&.active{
+		opacity : 1;
+	}
+}
+
+.anim-fadeIn-halfopacity{
+	opacity: 0.5;
+	@include transition ( opacity 1.2s );
+
+	&.active{
+		opacity : 1;
+	}
+}
+
+/*
+ * Fade in from right
+ */
+
+.anim-fadeIn-fromLeft{
+	opacity: 0;
+	@include transform(translateX(-20px));
+
+	@include transition-property (opacity, transform);
+	@include transition-duration(1.0s, 1.0s);
+	@include transition-timing-function($ease-in-out-quart, ease);
+
+	&.active{
+		opacity : 1;
+		@include transform(translateX(0px));
+
+	}
+}
+
+
+.anim-step-fade{
+
+	opacity: 1;
+	@include transform(translateY(0px));
+
+	@include transition-property (opacity, transform);
+	@include transition-duration(0.4s, 0.4s);
+	@include transition-timing-function($ease-out-expo, $ease-out-expo);
+
+	
+	&:nth-child(1){
+		@include transition-delay(0.1s);
+	}
+
+	&:nth-child(2){
+		@include transition-delay(0.2s);
+	}
+
+	&:nth-child(3){
+		@include transition-delay(0.3s);
+	}
+
+	&:nth-child(4){
+		@include transition-delay(0.4s);
+	}
+
+	&:nth-child(5){
+		@include transition-delay(0.5s);
+	}
+
+	&.inactive{
+		opacity: 0.5;
+	}
+}

@@ -1,0 +1,395 @@
+/*************
+ KNZ NAIL CSS
+ @author Aurelien Gantier
+ ************/
+/**
+  *
+  * Arlg Default styles framework
+  *
+  */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, pre, a, code, em, img, strong, sub, sup, tt, var, b, u, i, center, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none; }
+
+.bold {
+  font-weight: bold; }
+
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none; }
+
+/*
+ * Simple fade in with opacity
+ */
+.anim-fadeIn {
+  opacity: 0;
+  -webkit-transition: opacity 1.2s;
+  -moz-transition: opacity 1.2s;
+  transition: opacity 1.2s; }
+  .anim-fadeIn.active {
+    opacity: 1; }
+
+.anim-fadeIn-halfopacity {
+  opacity: 0.5;
+  -webkit-transition: opacity 1.2s;
+  -moz-transition: opacity 1.2s;
+  transition: opacity 1.2s; }
+  .anim-fadeIn-halfopacity.active {
+    opacity: 1; }
+
+/*
+ * Fade in from right
+ */
+.anim-fadeIn-fromLeft {
+  opacity: 0;
+  -webkit-transform: translateX(-20px);
+  -moz-transform: translateX(-20px);
+  -o-transform: translateX(-20px);
+  transform: translateX(-20px);
+  -webkit-transition-property: opacity, -webkit-transform;
+  -moz-transition-property: opacity, -moz-transform;
+  transition-property: opacity, transform;
+  -webkit-transition-duration: 1s, 1s;
+  -moz-transition-duration: 1s, 1s;
+  transition-duration: 1s, 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1), ease;
+  -moz-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1), ease;
+  transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1), ease; }
+  .anim-fadeIn-fromLeft.active {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    transform: translateX(0px); }
+
+.anim-step-fade {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition-property: opacity, -webkit-transform;
+  -moz-transition-property: opacity, -moz-transform;
+  transition-property: opacity, transform;
+  -webkit-transition-duration: 0.4s, 0.4s;
+  -moz-transition-duration: 0.4s, 0.4s;
+  transition-duration: 0.4s, 0.4s;
+  -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1), cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1), cubic-bezier(0.19, 1, 0.22, 1);
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1), cubic-bezier(0.19, 1, 0.22, 1); }
+  .anim-step-fade:nth-child(1) {
+    -webkit-transition-delay: 0.1s;
+    -moz-transition-delay: 0.1s;
+    transition-delay: 0.1s; }
+  .anim-step-fade:nth-child(2) {
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    transition-delay: 0.2s; }
+  .anim-step-fade:nth-child(3) {
+    -webkit-transition-delay: 0.3s;
+    -moz-transition-delay: 0.3s;
+    transition-delay: 0.3s; }
+  .anim-step-fade:nth-child(4) {
+    -webkit-transition-delay: 0.4s;
+    -moz-transition-delay: 0.4s;
+    transition-delay: 0.4s; }
+  .anim-step-fade:nth-child(5) {
+    -webkit-transition-delay: 0.5s;
+    -moz-transition-delay: 0.5s;
+    transition-delay: 0.5s; }
+  .anim-step-fade.inactive {
+    opacity: 0.5; }
+
+@font-face {
+  font-family: 'futura_stdmedium';
+  src: url("fonts/futurastd-medium-webfont.eot");
+  src: url("fonts/futurastd-medium-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/futurastd-medium-webfont.woff") format("woff"), url("fonts/futurastd-medium-webfont.ttf") format("truetype"), url("fonts/futurastd-medium-webfont.svg#futura_stdmedium") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  height: 100%;
+  overflow: hidden;
+  cursor: none; }
+
+.main_wrapper {
+  max-width: 467px;
+  width: 467px;
+  height: 100%;
+  margin: 0 auto; }
+
+#hand {
+  max-width: 467px;
+  position: absolute;
+  z-index: 1;
+  bottom: 0; }
+
+.hand_top, .hand_bot {
+  display: block;
+  width: 100%; }
+
+.hand-top {
+  visibility: hidden;
+  position: relative;
+  z-index: 1; }
+
+#paint {
+  position: absolute;
+  top: 0;
+  z-index: 2; }
+
+#mask {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  z-index: 1000; }
+
+/** CURSOR **/
+#cursor {
+  background: url("../img/cursor.png");
+  width: 205px;
+  height: 219px;
+  position: absolute;
+  z-index: 9;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 200ms;
+  -moz-transition-duration: 200ms;
+  transition-duration: 200ms;
+  -webkit-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1); }
+  #cursor.active {
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transform: translateY(10px); }
+
+/** COUNTER **/
+.counter {
+  position: absolute;
+  bottom: 27px;
+  left: 50%;
+  z-index: 3; }
+  .counter .ext {
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin: 10px 0 0 21px;
+    border-radius: 18px;
+    text-align: center;
+    background: #151515;
+    background: rgba(21, 21, 21, 0.77); }
+  .counter span {
+    display: block;
+    width: 26px;
+    height: 26px;
+    border-radius: 18px;
+    text-align: center;
+    color: #cbbd8f;
+    font: 18px/27px 'Unica One', cursive; }
+
+/** Anim **/
+.animation_wrapper {
+  position: absolute;
+  top: 0;
+  z-index: 4; }
+
+/** background **/
+#background {
+  width: 100%;
+  height: 0%;
+  z-index: 0;
+  position: absolute;
+  bottom: 0;
+  background: #000000; }
+  #background .progress {
+    width: 100%;
+    height: 100%;
+    background: #FFF;
+    -webkit-transition-property: height;
+    -moz-transition-property: height;
+    transition-property: height;
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    transition-duration: 1s;
+    -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    -moz-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); }
+
+/** TExt and share **/
+.right_text p, .left_text p {
+  font: 30px/30px 'futura_stdmedium', Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #000;
+  text-align: center;
+  cursor: pointer; }
+
+.left_text {
+  position: absolute;
+  z-index: 5;
+  left: 14.0625%;
+  top: 90.625%; }
+
+.right_text {
+  position: absolute;
+  z-index: 5;
+  right: 8%;
+  top: 90.625%;
+  -webkit-transform: translateY(100px);
+  -moz-transform: translateY(100px);
+  -o-transform: translateY(100px);
+  transform: translateY(100px);
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 400ms;
+  -moz-transition-duration: 400ms;
+  transition-duration: 400ms;
+  -webkit-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1); }
+  .right_text.fr {
+    right: 6%; }
+  .right_text p {
+    cursor: normal; }
+  .right_text.active {
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px); }
+  .right_text li {
+    float: left;
+    margin: 7px 20px 0 0;
+    width: 16px;
+    height: 16px; }
+    .right_text li:first-child {
+      margin: 7px 20px 0 62px; }
+      .right_text li:first-child.fr {
+        margin: 7px 20px 0 112px; }
+    .right_text li a {
+      width: 16px;
+      height: 16px;
+      display: block;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden; }
+      .right_text li a.facebook-share {
+        background: url("../assets/share-facebook.png") no-repeat; }
+      .right_text li a.twitter-share {
+        background: url("../assets/share-twitter.png") no-repeat; }
+      .right_text li a.pinterest-share {
+        background: url("../assets/share-pinterest.png") no-repeat; }
+
+.btn_try {
+  display: none;
+  opacity: 0; }
+  .btn_try.active {
+    display: block;
+    -webkit-transition: opacity 400ms ease-in-out 1s;
+    -moz-transition: opacity 400ms ease-in-out 1s;
+    transition: opacity 400ms ease-in-out 1s;
+    opacity: 1; }
+
+/** LOADER **/
+.loader {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #FFF;
+  z-index: 10; }
+  .loader .image {
+    width: 95%;
+    height: 289px;
+    max-height: 289px;
+    position: absolute;
+    top: 50%;
+    margin: -145px 0 0 2.5%;
+    background: url("../img/loader-kenzo.gif") white no-repeat center;
+    background-size: contain; }
+
+.fb-like {
+  z-index: 50;
+  float: right;
+  margin: 5px; }
+
+.blink_me {
+  animation-name: blinker;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: blinker;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite; }
+
+@-moz-keyframes blinker {
+  /* Decimal not necessary, 0 and 1 is enough */
+  0% {
+    opacity: 1.0; }
+
+  50% {
+    opacity: 0.0; }
+
+  100% {
+    opacity: 1.0; } }
+
+@-webkit-keyframes blinker {
+  0% {
+    opacity: 1.0; }
+
+  50% {
+    opacity: 0.0; }
+
+  100% {
+    opacity: 1.0; } }
+
+@keyframes blinker {
+  0% {
+    opacity: 1.0; }
+
+  50% {
+    opacity: 0.0; }
+
+  100% {
+    opacity: 1.0; } }
+
+/*** DEVICE ***/
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  #cursor {
+    display: none; }
+
+  body {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000; } }

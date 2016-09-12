@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Knz - Nailed it !</title>
+        <link href='//fonts.googleapis.com/css?family=Unica+One' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+    </head>
+    <body>
+    
+    <div id="cursor"></div>
+
+        <div class="main_wrapper">
+
+            <div id="hand">
+            
+                <img class="hand_top" src="" />
+            
+                <img src="assets/650/hand-bottom.png" class="hand_bot"/>
+
+                <div id="paint_canvas_wrapper">
+                    <canvas id="paint" width="467" height="471"></canvas>
+                </div>
+
+                <div class="animation_wrapper">
+                    <canvas id='animationcanvas'></canvas>
+                </div>
+
+            </div>
+            
+            <div class="counter">
+                <span class="ext"><span id="m">00</span></span>
+                <span class="ext"><span id="s">00</span></span>
+                <span class="ext"><span id="ms">00</span></span>
+            </div>
+
+        </div>
+
+        <div class="left_text">
+            <p class="btn_try">Réessayer</p>
+        </div>
+
+        <div class="right_text fr">
+            <p>Partager le score</p>
+            <ul>
+                <li class="fr"><a href="#" class="facebook-share" data-image="" data-title="" data-summary=" " data-textafter="">Facebook</a></li>
+                <li><a href="#" class="twitter-share" data-text="J'ai fini ma manucure en " data-textafter=" avec l'application 'Nailed it'! Jouez maintenant : ">Twitter</a></li>
+                <li><a href="#" class="pinterest-share" data-summary="Decorez vos ongles virtuels des motifs de la collection Automne-Hiver avec l'application 'Nailed it'!" data-image="">Pinterest</a></li>
+            </ul>
+            
+        </div>
+
+        <div id="background"><div class="progress"></div></div>
+
+        <!--  SCRIPTS  -->
+
+        <!-- Vendor -/ -->
+        <script src="vendor/jquery.js"></script>
+        <script src="vendor/underscore.js"></script>
+        <script src="vendor/requestanim.js"></script>
+    
+        <!-- NAIL TUTORIAL -> Main is the starting point -->
+        <script src="js/Vars.js"></script>
+        <script src="js/Resize/Resize.js"></script>
+        <script src="js/Main.js"></script>
+        <script src="js/Events/Events.js"></script>
+        <script src="js/Game/ButtonsEvents.js"></script>
+        <script src="js/Game/Timer.js"></script>
+        <script src="js/Counter.js"></script>
+        <script src="js/Utils/Utils.js"></script>
+        <script src="js/Cursor/Cursor.js"></script>
+        <script src="js/Game/VisibleImage.js"></script>
+        <script src="js/Game/Game.js"></script>
+        <script src="js/Canvas/PaintCanvas.js"></script>
+        <script src="js/Canvas/MaskCanvas.js"></script>
+
+        <script src="js/Animation/GifSequence.js"></script>
+        
+    </body>
+</html>

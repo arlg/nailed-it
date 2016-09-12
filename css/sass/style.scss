@@ -1,0 +1,303 @@
+/*************
+ KNZ NAIL CSS
+ @author Aurelien Gantier
+ ************/
+
+//sass --watch css/sass/style.scss:css/style.css
+
+//Bourbon styles
+@import 'bourbon/bourbon';
+$prefix-for-microsoft: false;
+
+/**
+  *
+  * Arlg Default styles framework
+  *
+  */
+@import "arlg/arlgstyles";
+
+@import 'fonts';
+
+body {
+    height: 100%;
+    overflow: hidden;
+    cursor: none;
+}
+
+.main_wrapper{
+
+    max-width: 467px;
+    width: 467px;
+    height: 100%;
+    margin: 0 auto;
+
+}
+
+#hand{
+    max-width: 467px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+}
+
+.hand_top, .hand_bot{
+    display: block;
+    width: 100%;
+}
+
+.hand-top{
+    visibility: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+#paint{
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+#mask{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    z-index: 1000;
+}
+
+/** CURSOR **/
+#cursor{
+    background: url('../img/cursor.png');
+    width: 205px;
+    height: 219px;
+    position: absolute;
+    z-index : 9;
+    @include transition-property(transform);
+    @include transition-duration(200ms);
+    @include transition-timing-function($ease-in-out-quart);
+
+    &.active{
+        @include transform(translateY(10px));
+    }
+}
+
+/** COUNTER **/
+.counter{
+    position: absolute;
+    bottom: 27px;
+    left: 50%;
+    z-index: 3;
+
+    .ext{
+        display: block;
+        width: 26px;
+        height: 26px;
+        margin: 10px 0 0 21px;
+        border-radius: 18px;
+        text-align: center;
+        background: #151515;
+        background: rgba(21, 21, 21, 0.77);
+    }
+
+    span{
+        display: block;
+        width: 26px;
+        height: 26px;
+        border-radius: 18px;
+        text-align: center;
+        color: #cbbd8f;
+        font: 18px/27px 'Unica One', cursive;
+    }
+}
+
+/** Anim **/
+.animation_wrapper{
+    position: absolute;
+    top: 0;
+    z-index: 4;
+}
+
+/** background **/
+#background{
+    width: 100%;
+    height: 0%;
+    z-index: 0;
+    position: absolute;
+    bottom : 0;
+    background: #000000;
+
+    .progress{
+        @include square(100%);
+        background: #FFF;
+
+        @include transition-property (height);
+        @include transition-duration(1.0s);
+        @include transition-timing-function($ease-out-quart);
+    }
+}
+
+/** TExt and share **/
+.right_text p, .left_text p{
+    font: 30px/30px 'futura_stdmedium', Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #000;
+    text-align : center;
+    cursor: pointer;
+}
+
+
+.left_text{
+    position: absolute;
+    z-index: 5;
+    left: 14.0625%;
+    top: 90.625%;
+}
+
+.right_text{
+    position: absolute;
+    z-index: 5;
+    right: 8%;
+    top : 90.625%;
+    @include transform(translateY(100px));
+
+    &.fr{
+        right: 6%;
+    }
+
+    p{
+        cursor: normal;
+    }
+
+    @include transition-property (transform);
+    @include transition-duration(400ms);
+    @include transition-timing-function($ease-in-out-quart);
+
+    &.active{        
+        @include transform(translateY(0px));
+    }
+
+    li{
+        float :left;
+        margin: 7px 20px 0 0;
+        @include square(16px);
+        
+        &:first-child{
+    
+            margin: 7px 20px 0 62px;
+
+            &.fr{
+                margin: 7px 20px 0 112px;    
+            }
+
+        }
+
+        a{
+            @include square(16px);
+            display: block;
+            text-indent: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+
+            &.facebook-share{
+                background: url('../assets/share-facebook.png') no-repeat;
+            }
+
+            &.twitter-share{
+                background: url('../assets/share-twitter.png') no-repeat;
+            }
+
+            &.pinterest-share{
+                background: url('../assets/share-pinterest.png') no-repeat;
+            }
+        }
+    }
+}
+
+.btn_try{
+    display: none;
+    opacity: 0;
+    
+    &.active{
+        display: block;
+        @include transition (opacity 400ms ease-in-out 1s);
+        opacity: 1;
+    }
+}
+
+/** LOADER **/
+.loader{
+    @include square(100%);
+    position: absolute;
+    left:0;top:0;
+    background:#FFF;
+    z-index: 10;
+
+    .image{
+        width: 95%;
+        height: 289px;
+        max-height: 289px;
+        position:absolute;
+        top: 50%;
+        margin: -145px 0 0 2.5%;
+        background: url('../img/loader-kenzo.gif') #FFF no-repeat center;
+        background-size: contain;
+    }
+}
+
+.fb-like{
+    z-index: 50;
+    float: right;
+    margin: 5px;
+}
+.blink_me {
+    animation-name: blinker;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@-moz-keyframes blinker {  /* Decimal not necessary, 0 and 1 is enough */
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+/*** DEVICE ***/ 
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+
+    #cursor{
+        display: none;
+    }
+
+    body{
+         -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        -webkit-backface-visibility: hidden;
+        -webkit-perspective: 1000;
+    }
+
+}
